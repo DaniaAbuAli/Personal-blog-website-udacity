@@ -1,0 +1,140 @@
+@import url("./footer.css");
+@import url("./nav.css");
+@import url("./nav-media.css");
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+:root {
+  --main-color: black;
+  --secondary-color: rgb(255 67 146);
+  --background: rgb(19, 19, 19);
+  --padding: 60px;
+  --margin: 60px;
+}
+body {
+  font-family: "Nunito Sans", sans-serif;
+}
+ul li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+.container {
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+header {
+  background-color: var(--background);
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+header a,
+header i {
+  color: white;
+  transition: 0.5s;
+  font-size: 17px;
+}
+header a:hover,
+header .container i:hover {
+  color: var(--secondary-color);
+}
+header .container i {
+  display: inline-block;
+  margin-right: 5px;
+}
+.project {
+  background-color: var(--background);
+  width: 100%;
+}
+.project .cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  color: white;
+  text-align: center;
+  padding-bottom: var(--padding);
+}
+.project .cards .card {
+  background-color: var(--main-color);
+  border-radius: 10px;
+  border: 1px solid rgb(55 52 52);
+  padding: 20px;
+  transition: 0.5s;
+  /* height: 400px; */
+}
+.project .cards .card:hover {
+  box-shadow: 0 0 45px var(--secondary-color);
+}
+.project .cards .card h3 {
+  margin-bottom: 15px;
+  font-size: 19px;
+  font-weight: 800;
+}
+.project .cards .card img {
+  width: 350px;
+  max-width: 100%;
+  margin-bottom: 10px;
+}
+.project h2 {
+  text-align: center;
+  padding-top: var(--padding);
+  padding-bottom: var(--padding);
+  color: white;
+  font-size: 30px;
+  font-weight: 800;
+  text-shadow: 3px 1px 8px;
+}
+.project .cards .card button {
+  background-color: var(--main-color);
+  border-radius: 5px;
+  padding: 10px;
+  border: 1px solid var(--secondary-color);
+  margin: 5px;
+  transition: 0.5s;
+  width: 100%;
+}
+.project .cards .card button:hover {
+  box-shadow: 0 0 20px var(--secondary-color);
+}
+.project .cards .card button a {
+  color: var(--secondary-color);
+  font-weight: 700;
+  font-size: 14px;
+}
+
+@media (max-width: 767px) {
+  header a,
+  header i {
+    font-size: 12px;
+  }
+}
+/* Small Screens */
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .container {
+    width: 750px;
+  }
+}
+
+/* Medium Screens */
+
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+
+/* Large Screens */
+
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}

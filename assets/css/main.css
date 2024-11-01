@@ -1,0 +1,184 @@
+@import url("./footer.css");
+@import url("./nav.css");
+@import url("./nav-media.css");
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+:root {
+  --main-color: black;
+  --secondary-color: rgb(255 67 146);
+  --background: rgb(19, 19, 19);
+  --padding: 60px;
+  --margin: 60px;
+}
+body {
+  font-family: "Nunito Sans", sans-serif;
+}
+ul li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+.container {
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+header {
+  width: 100%;
+  background-color: var(--main-color);
+  height: 220px;
+}
+header .text {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+header .text h1 {
+  color: white;
+  margin-top: 30px;
+  text-shadow: 3px 1px 8px;
+  font-weight: 900;
+  font-size: 50px;
+}
+header .text button {
+  margin-top: 20px;
+  color: var(--secondary-color);
+  padding: 20px;
+  border: var(--secondary-color) 2px solid;
+  background-color: var(--main-color);
+  font-weight: 900;
+  border-radius: 35px;
+  font-size: 16px;
+  cursor: pointer;
+}
+.know-me {
+  background-color: var(--background);
+  width: 100%;
+}
+.know-me h2 {
+  text-align: center;
+  padding-top: var(--padding);
+  padding-bottom: var(--padding);
+  color: white;
+  font-size: 30px;
+  font-weight: 800;
+  text-shadow: 3px 1px 8px;
+}
+.know-me .cards {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  padding-bottom: var(--padding);
+}
+.know-me .cards .card {
+  background-color: var(--main-color);
+  border-radius: 10px;
+  border: 1px solid rgb(55 52 52);
+  transition: 0.5s;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  width: 500px;
+}
+.know-me .cards .card:hover {
+  box-shadow: 0 0 45px var(--secondary-color);
+}
+.know-me .cards .card h3,
+.know-me .cards .card figure {
+  margin-bottom: 10px;
+}
+.know-me .cards .card h3 {
+  font-size: 19px;
+  font-weight: 800;
+}
+.know-me .cards img {
+  width: 150px;
+  border-radius: 50%;
+  margin-bottom: 5px;
+}
+.know-me .cards .card button {
+  background-color: var(--main-color);
+  border-radius: 5px;
+  padding: 10px;
+  border: 1px solid var(--secondary-color);
+  margin: 5px;
+  transition: 0.5s;
+}
+.know-me .cards .card button:hover {
+  box-shadow: 0 0 20px var(--secondary-color);
+}
+.know-me .cards .card button a {
+  color: var(--secondary-color);
+  font-weight: 700;
+  font-size: 14px;
+}
+
+@media (max-width: 767px) {
+  header {
+    height: 190px;
+  }
+  header .text h1 {
+    font-size: 30px;
+  }
+  header .text button {
+    padding: 10px;
+    font-size: 14px;
+  }
+  .know-me .cards .card {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+}
+/* Small Screens */
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .container {
+    width: 750px;
+  }
+  header .text h1 {
+    font-size: 40px;
+  }
+  header .text button {
+    padding: 15px;
+    font-size: 14px;
+  }
+  header {
+    height: 200px;
+  }
+  .know-me .cards .card {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+}
+
+/* Medium Screens */
+
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+  .know-me .cards .card {
+    width: 450px;
+  }
+}
+
+/* Large Screens */
+
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+  .know-me .cards .card {
+    width: 500px;
+  }
+}
