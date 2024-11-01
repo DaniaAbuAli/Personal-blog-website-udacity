@@ -92,7 +92,6 @@ header .container i {
 .info .text .social ul li {
   width: 50px;
   height: 50px;
-  /* margin-right: 20px; */
   background-color: black;
   border-radius: 50%;
   border: 1px solid var(--secondary-color);
